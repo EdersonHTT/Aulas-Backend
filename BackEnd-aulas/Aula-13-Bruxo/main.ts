@@ -30,19 +30,19 @@ function Main (){
                 }
                 let nuAluno: number = Number(ask.question("Numero aluno: "))-1
                 console.clear()
-                if((ask.question("Editar nome? ") === "sim")){
+                if((ask.question("Editar nome?\n[1] - Sim                [2] - Não\n") === "1")){
                     alunos[nuAluno].setNome(ask.question("Nome: "))
                 }
-                if((ask.question("Editar idade? ") === "sim")){
+                if((ask.question("Editar idade?\n[1] - Sim                [2] - Não\n") === "1")){
                     alunos[nuAluno].setIdade(Number(ask.question("Idade: ")))
                 }
-                if((ask.question("Editar nacionalidae? ") === "sim")){
+                if((ask.question("Editar nacionalidae?\n[1] - Sim                [2] - Não\n") === "1")){
                     alunos[nuAluno].setNacionalidade(ask.question("Nacionalidade: "))
                 }
-                if((ask.question("Editar casa? ") === "sim")){
+                if((ask.question("Editar casa?\n[1] - Sim                [2] - Não\n") === "1")){
                     alunos[nuAluno].setCasa(ask.question("Casa: "))
                 }
-                if((ask.question("Editar classe magica? ") === "sim")){
+                if((ask.question("Editar classe magica?\n[1] - Sim                [2] - Não\n") === "1")){
                     alunos[nuAluno].setClasseMagica(ask.question("Classe Magica: "))
                 }
                 console.clear()
