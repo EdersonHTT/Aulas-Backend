@@ -14,7 +14,7 @@ var Ryu = /** @class */ (function () {
             dano = Number(Math.floor(Math.random() * 15));
         }
         inimigo.setVida(inimigo.getVida() - dano);
-        console.log("Voc\u00EA causou ".concat(dano, " de dano"));
+        console.log("Usou Golpe Leve e causou ".concat(dano, " de dano"));
     };
     Ryu.prototype.golpePesado = function (inimigo) {
         var dano = 0;
@@ -22,7 +22,7 @@ var Ryu = /** @class */ (function () {
             dano = Number(Math.floor(Math.random() * 30));
         }
         inimigo.setVida(inimigo.getVida() - dano);
-        console.log("Voc\u00EA causou ".concat(dano, " de dano"));
+        console.log("Usou Golpe Pesado e causou ".concat(dano, " de dano"));
     };
     Ryu.prototype.golpeEspecial = function (inimigo) {
         var dano = 0;
@@ -30,7 +30,7 @@ var Ryu = /** @class */ (function () {
             dano = Number(Math.floor(Math.random() * 50));
         }
         inimigo.setVida(inimigo.getVida() - dano);
-        console.log("Voc\u00EA causou ".concat(dano, " de dano"));
+        console.log("Usou Golpe Especial e causou ".concat(dano, " de dano"));
     };
     Ryu.prototype.getNome = function () {
         return this.nome;
