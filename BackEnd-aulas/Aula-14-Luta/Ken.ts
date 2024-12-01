@@ -13,7 +13,7 @@ export class Ken implements Personagem {
             dano = Number(Math.floor(Math.random()*15))
         }
         inimigo.setVida(inimigo.getVida()-dano)
-        console.log(`Você causou ${dano} de dano`)
+        console.log(`Usou Golpe Leve e causou ${dano} de dano`)
     }
 
     golpePesado(inimigo: Personagem): void{
@@ -22,7 +22,7 @@ export class Ken implements Personagem {
             dano = Number(Math.floor(Math.random()*30))
         }
         inimigo.setVida(inimigo.getVida()-dano)
-        console.log(`Você causou ${dano} de dano`)
+        console.log(`Usou Golpe Pesado e causou ${dano} de dano`)
     }
 
     golpeEspecial(inimigo: Personagem): void{
@@ -31,7 +31,7 @@ export class Ken implements Personagem {
             dano = Number(Math.floor(Math.random()*45))
         }
         inimigo.setVida(inimigo.getVida()-dano)
-        console.log(`Você causou ${dano} de dano`)
+        console.log(`Usou Golpe Especial e causou ${dano} de dano`)
     }
     
     public getNome(): string{
