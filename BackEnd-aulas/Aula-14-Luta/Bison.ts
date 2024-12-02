@@ -1,16 +1,16 @@
 import { Personagem } from "./Personagem";
 
-export class Ryu implements Personagem {
+export class Bison implements Personagem {
     
-    private nome: string = "Ryu"
+    private nome: string = "Bison"
     private vida: number = 100
-    private nacionalidade: string = "Japones"
-    private estiloLuta: string = "Shotokan Karate"
+    private nacionalidade: string = "BR"
+    private estiloLuta: string = "Bison"
     
     golpeLeve(inimigo: Personagem): void{
         let dano:number = 0
-        while(dano < 5){
-            dano = Number(Math.floor(Math.random()*15))
+        while(dano < 10){
+            dano = Number(Math.floor(Math.random()*20))
         }
         inimigo.setVida(inimigo.getVida()-dano)
         console.log(`Usou Golpe Leve e causou ${dano} de dano`)
@@ -18,7 +18,7 @@ export class Ryu implements Personagem {
 
     golpePesado(inimigo: Personagem): void{
         let dano:number = 0
-        while(dano < 5){
+        while(dano < 15){
             dano = Number(Math.floor(Math.random()*30))
         }
         inimigo.setVida(inimigo.getVida()-dano)

@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Ken = void 0;
-var Ken = /** @class */ (function () {
-    function Ken() {
-        this.nome = "Ken";
+exports.Cammy = void 0;
+var Cammy = /** @class */ (function () {
+    function Cammy() {
+        this.nome = "Cammy";
         this.vida = 100;
-        this.nacionalidade = "Americano";
-        this.estiloLuta = "Ansatsuken";
+        this.nacionalidade = "Reino Unido";
+        this.estiloLuta = "Forças Especiais";
     }
-    Ken.prototype.golpeLeve = function (inimigo) {
+    Cammy.prototype.golpeLeve = function (inimigo) {
         var dano = 0;
         while (dano < 5) {
             dano = Number(Math.floor(Math.random() * 15));
@@ -16,46 +16,46 @@ var Ken = /** @class */ (function () {
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Leve e causou ".concat(dano, " de dano"));
     };
-    Ken.prototype.golpePesado = function (inimigo) {
+    Cammy.prototype.golpePesado = function (inimigo) {
         var dano = 0;
-        while (dano < 5) {
-            dano = Number(Math.floor(Math.random() * 30));
+        while (dano < 15) {
+            dano = Number(Math.floor(Math.random() * 25));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Pesado e causou ".concat(dano, " de dano"));
     };
-    Ken.prototype.golpeEspecial = function (inimigo) {
+    Cammy.prototype.golpeEspecial = function (inimigo) {
         var dano = 0;
-        while (dano < 25) {
-            dano = Number(Math.floor(Math.random() * 45));
+        while (dano < 20) {
+            dano = Number(Math.floor(Math.random() * 40));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Especial e causou ".concat(dano, " de dano"));
     };
-    Ken.prototype.getNome = function () {
+    Cammy.prototype.getNome = function () {
         return this.nome;
     };
-    Ken.prototype.setNome = function (nome) {
+    Cammy.prototype.setNome = function (nome) {
         this.nome = nome;
     };
-    Ken.prototype.getVida = function () {
+    Cammy.prototype.getVida = function () {
         return this.vida;
     };
-    Ken.prototype.setVida = function (vida) {
+    Cammy.prototype.setVida = function (vida) {
         this.vida = vida;
     };
-    Ken.prototype.getNacionalidade = function () {
+    Cammy.prototype.getNacionalidade = function () {
         return this.nacionalidade;
     };
-    Ken.prototype.setNacionalidade = function (nacionalidade) {
+    Cammy.prototype.setNacionalidade = function (nacionalidade) {
         this.nacionalidade = nacionalidade;
     };
-    Ken.prototype.getEstiloLuta = function () {
+    Cammy.prototype.getEstiloLuta = function () {
         return this.estiloLuta;
     };
-    Ken.prototype.setEstiloLuta = function (nacionalidade) {
+    Cammy.prototype.setEstiloLuta = function (nacionalidade) {
         this.estiloLuta = this.estiloLuta;
     };
-    return Ken;
+    return Cammy;
 }());
-exports.Ken = Ken;
+exports.Cammy = Cammy;

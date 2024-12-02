@@ -4,8 +4,8 @@ export class Ken implements Personagem {
     
     private nome: string = "Ken"
     private vida: number = 100
-    private nacionalidade: string = "BR"
-    private estiloLuta: string = "Ken"
+    private nacionalidade: string = "Americano"
+    private estiloLuta: string = "Ansatsuken"
     
     golpeLeve(inimigo: Personagem): void{
         let dano:number = 0

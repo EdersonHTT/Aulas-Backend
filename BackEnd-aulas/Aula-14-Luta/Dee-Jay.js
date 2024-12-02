@@ -1,30 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Ryu = void 0;
-var Ryu = /** @class */ (function () {
-    function Ryu() {
-        this.nome = "Ryu";
+exports.DeeJay = void 0;
+var DeeJay = /** @class */ (function () {
+    function DeeJay() {
+        this.nome = "Dee Jay";
         this.vida = 100;
-        this.nacionalidade = "Japones";
-        this.estiloLuta = "Shotokan Karate";
+        this.nacionalidade = "Angolano";
+        this.estiloLuta = "Muay Thai Kickboxing";
     }
-    Ryu.prototype.golpeLeve = function (inimigo) {
+    DeeJay.prototype.golpeLeve = function (inimigo) {
         var dano = 0;
         while (dano < 5) {
-            dano = Number(Math.floor(Math.random() * 15));
+            dano = Number(Math.floor(Math.random() * 10));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Leve e causou ".concat(dano, " de dano"));
     };
-    Ryu.prototype.golpePesado = function (inimigo) {
+    DeeJay.prototype.golpePesado = function (inimigo) {
         var dano = 0;
-        while (dano < 5) {
-            dano = Number(Math.floor(Math.random() * 30));
+        while (dano < 10) {
+            dano = Number(Math.floor(Math.random() * 20));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Pesado e causou ".concat(dano, " de dano"));
     };
-    Ryu.prototype.golpeEspecial = function (inimigo) {
+    DeeJay.prototype.golpeEspecial = function (inimigo) {
         var dano = 0;
         while (dano < 30) {
             dano = Number(Math.floor(Math.random() * 50));
@@ -32,30 +32,30 @@ var Ryu = /** @class */ (function () {
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Especial e causou ".concat(dano, " de dano"));
     };
-    Ryu.prototype.getNome = function () {
+    DeeJay.prototype.getNome = function () {
         return this.nome;
     };
-    Ryu.prototype.setNome = function (nome) {
+    DeeJay.prototype.setNome = function (nome) {
         this.nome = nome;
     };
-    Ryu.prototype.getVida = function () {
+    DeeJay.prototype.getVida = function () {
         return this.vida;
     };
-    Ryu.prototype.setVida = function (vida) {
+    DeeJay.prototype.setVida = function (vida) {
         this.vida = vida;
     };
-    Ryu.prototype.getNacionalidade = function () {
+    DeeJay.prototype.getNacionalidade = function () {
         return this.nacionalidade;
     };
-    Ryu.prototype.setNacionalidade = function (nacionalidade) {
+    DeeJay.prototype.setNacionalidade = function (nacionalidade) {
         this.nacionalidade = nacionalidade;
     };
-    Ryu.prototype.getEstiloLuta = function () {
+    DeeJay.prototype.getEstiloLuta = function () {
         return this.estiloLuta;
     };
-    Ryu.prototype.setEstiloLuta = function (nacionalidade) {
+    DeeJay.prototype.setEstiloLuta = function (nacionalidade) {
         this.estiloLuta = this.estiloLuta;
     };
-    return Ryu;
+    return DeeJay;
 }());
-exports.Ryu = Ryu;
+exports.DeeJay = DeeJay;

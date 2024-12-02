@@ -1,30 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Ryu = void 0;
-var Ryu = /** @class */ (function () {
-    function Ryu() {
-        this.nome = "Ryu";
+exports.Bison = void 0;
+var Bison = /** @class */ (function () {
+    function Bison() {
+        this.nome = "Bison";
         this.vida = 100;
-        this.nacionalidade = "Japones";
-        this.estiloLuta = "Shotokan Karate";
+        this.nacionalidade = "BR";
+        this.estiloLuta = "Bison";
     }
-    Ryu.prototype.golpeLeve = function (inimigo) {
+    Bison.prototype.golpeLeve = function (inimigo) {
         var dano = 0;
-        while (dano < 5) {
-            dano = Number(Math.floor(Math.random() * 15));
+        while (dano < 10) {
+            dano = Number(Math.floor(Math.random() * 20));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Leve e causou ".concat(dano, " de dano"));
     };
-    Ryu.prototype.golpePesado = function (inimigo) {
+    Bison.prototype.golpePesado = function (inimigo) {
         var dano = 0;
-        while (dano < 5) {
+        while (dano < 15) {
             dano = Number(Math.floor(Math.random() * 30));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Pesado e causou ".concat(dano, " de dano"));
     };
-    Ryu.prototype.golpeEspecial = function (inimigo) {
+    Bison.prototype.golpeEspecial = function (inimigo) {
         var dano = 0;
         while (dano < 30) {
             dano = Number(Math.floor(Math.random() * 50));
@@ -32,30 +32,30 @@ var Ryu = /** @class */ (function () {
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Especial e causou ".concat(dano, " de dano"));
     };
-    Ryu.prototype.getNome = function () {
+    Bison.prototype.getNome = function () {
         return this.nome;
     };
-    Ryu.prototype.setNome = function (nome) {
+    Bison.prototype.setNome = function (nome) {
         this.nome = nome;
     };
-    Ryu.prototype.getVida = function () {
+    Bison.prototype.getVida = function () {
         return this.vida;
     };
-    Ryu.prototype.setVida = function (vida) {
+    Bison.prototype.setVida = function (vida) {
         this.vida = vida;
     };
-    Ryu.prototype.getNacionalidade = function () {
+    Bison.prototype.getNacionalidade = function () {
         return this.nacionalidade;
     };
-    Ryu.prototype.setNacionalidade = function (nacionalidade) {
+    Bison.prototype.setNacionalidade = function (nacionalidade) {
         this.nacionalidade = nacionalidade;
     };
-    Ryu.prototype.getEstiloLuta = function () {
+    Bison.prototype.getEstiloLuta = function () {
         return this.estiloLuta;
     };
-    Ryu.prototype.setEstiloLuta = function (nacionalidade) {
+    Bison.prototype.setEstiloLuta = function (nacionalidade) {
         this.estiloLuta = this.estiloLuta;
     };
-    return Ryu;
+    return Bison;
 }());
-exports.Ryu = Ryu;
+exports.Bison = Bison;
