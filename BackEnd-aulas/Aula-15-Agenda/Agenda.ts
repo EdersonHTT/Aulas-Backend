@@ -20,7 +20,7 @@ export class Agenda {
 
     listarContatos(): void {
         this.contatos.forEach((contato, i)=>{
-            console.log(`Contato ${i+1}\n\nNome: ${contato.getNome()}\nNumero: ${contato.getTelefone()}\nEmail: ${contato.getEmail()}\n`)
+            console.log(`---------------> Contato ${i+1}\n\nNome: ${contato.getNome()}\nNumero: ${contato.getTelefone()}\nEmail: ${contato.getEmail()}\n`)
         })
     }
 
@@ -36,13 +36,17 @@ export class Agenda {
     }
 
     editarContato(nome: string, novoContato: Contato): void {
+        let localizar: boolean = false
         for(let i in this.contatos){
             if(this.contatos[i].getNome().toLocaleLowerCase() === nome.toLocaleLowerCase()){
                 this.contatos[i] = novoContato
-                console.log("Contato editado")
-                return
+                localizar = true
             }
         }
-        console.log("Contato nao encontrado\n")
+        if(localizar != true){
+            console.log("Contato nao encontrado\n")
+        } else {
+            console.log("Contato editado")
+        }
     }
 }

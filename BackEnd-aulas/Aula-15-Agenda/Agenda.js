@@ -20,7 +20,7 @@ var Agenda = /** @class */ (function () {
     };
     Agenda.prototype.listarContatos = function () {
         this.contatos.forEach(function (contato, i) {
-            console.log("Contato ".concat(i + 1, "\n\nNome: ").concat(contato.getNome(), "\nNumero: ").concat(contato.getTelefone(), "\nEmail: ").concat(contato.getEmail(), "\n"));
+            console.log("---------------> Contato ".concat(i + 1, "\n\nNome: ").concat(contato.getNome(), "\nNumero: ").concat(contato.getTelefone(), "\nEmail: ").concat(contato.getEmail(), "\n"));
         });
     };
     Agenda.prototype.buscarContato = function (nome) {
@@ -34,14 +34,19 @@ var Agenda = /** @class */ (function () {
         console.log("Contato nao encontrado\n");
     };
     Agenda.prototype.editarContato = function (nome, novoContato) {
+        var localizar = false;
         for (var i in this.contatos) {
             if (this.contatos[i].getNome().toLocaleLowerCase() === nome.toLocaleLowerCase()) {
                 this.contatos[i] = novoContato;
-                console.log("Contato editado");
-                return;
+                localizar = true;
             }
         }
-        console.log("Contato nao encontrado\n");
+        if (localizar != true) {
+            console.log("Contato nao encontrado\n");
+        }
+        else {
+            console.log("Contato editado");
+        }
     };
     return Agenda;
 }());

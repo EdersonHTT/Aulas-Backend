@@ -7,22 +7,22 @@ function main() {
     var sustentaMenu = true;
     while (sustentaMenu) {
         console.clear();
-        console.log("Escolha uma opção:");
+        console.log("Escolha uma opção:\n");
         console.log("1 - Adicionar contato");
         console.log("2 - Remover contato");
         console.log("3 - Listar todos os contatos");
         console.log("4 - Buscar contato");
         console.log("5 - Editar contato");
         console.log("6 - Sair");
-        var opcao = ask.question("Digite a opcao desejada: ");
+        var opcao = ask.question("\nDigite a opcao desejada: ");
         switch (opcao) {
             case "1":
                 console.clear();
-                var contato = new Contato_1.Contato(ask.question("Nome: "), Number(ask.question("\nTelefone: ")), ask.question("\nEmail: "));
+                var contato = new Contato_1.Contato(ask.question("Nome: "), ask.question("\nTelefone: "), ask.question("\nEmail: "));
                 console.clear();
                 console.log(agenda.adicionarContato(contato));
                 contato.mostrarContato();
-                ask.question("Enter para continuar...");
+                ask.question("\nEnter para continuar...");
                 break;
             case "2":
                 console.clear();
@@ -53,7 +53,7 @@ function main() {
                 for (var i in agenda.contatos) {
                     if (agenda.contatos[i].getNome().toLocaleLowerCase() === nome.toLocaleLowerCase()) {
                         console.clear();
-                        agenda.contatos[i].editarContato(ask.question("Nome: "), Number(ask.question("\nTelefone: ")), ask.question("\nEmail: "));
+                        agenda.contatos[i].editarContato(ask.question("Nome: "), ask.question("\nTelefone: "), ask.question("\nEmail: "));
                         console.clear();
                         agenda.editarContato(nome, agenda.contatos[i]);
                         ask.question("\nEnter para Continuar...");

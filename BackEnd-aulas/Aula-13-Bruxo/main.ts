@@ -1,6 +1,35 @@
 import { aluno } from "./Aluno"
 const ask = require("readline-sync")
 
+function classeMag(): string{
+    let classesMagicas: Array<string> = [
+        "Feitiçaria e Encantamentos",
+        "Poções",
+        "Transfiguração",
+        "Defesa Contra as Artes das Trevas",
+        "Herbologia",
+        "Astronomia",
+        "História da Magia",
+        "Cuidado de Criaturas Mágicas",
+        "Voo",
+        "Magia Experimental",
+        "Divinação",
+        "Runas Antigas"
+    ]
+    console.clear()
+    classesMagicas.forEach((classe, i)=> {
+        console.log(`[${i+1}] - ${classe}`)
+    });
+
+    for(let i in classesMagicas){
+        if(Number(ask.question("\nQual classe: ")) === Number(i)+1){
+            return classesMagicas[i]
+        }
+    }
+
+    return "Clsse nao encontrada"
+}
+
 function Main (){
     let sair:number = 0
     do{
@@ -9,7 +38,7 @@ function Main (){
         switch(Number(ask.question("Digite um numero: "))){
             case 1:
                 console.clear()
-                const alunoCadastro = new aluno(ask.question("Nome: "), Number(ask.question("Idade: ")), ask.question("Nacionalidade: "), ask.question("Classe Magica: "))
+                const alunoCadastro = new aluno(ask.question("Nome: "), Number(ask.question("Idade: ")), ask.question("Nacionalidade: "), classeMag())
                 alunos.push(alunoCadastro)
                 alunoCadastro.sortearCasa()
                 console.clear()

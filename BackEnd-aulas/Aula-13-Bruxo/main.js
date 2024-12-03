@@ -2,6 +2,32 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Aluno_1 = require("./Aluno");
 var ask = require("readline-sync");
+function classeMag() {
+    var classesMagicas = [
+        "Feitiçaria e Encantamentos",
+        "Poções",
+        "Transfiguração",
+        "Defesa Contra as Artes das Trevas",
+        "Herbologia",
+        "Astronomia",
+        "História da Magia",
+        "Cuidado de Criaturas Mágicas",
+        "Voo",
+        "Magia Experimental",
+        "Divinação",
+        "Runas Antigas"
+    ];
+    console.clear();
+    classesMagicas.forEach(function (classe, i) {
+        console.log("[".concat(i + 1, "] - ").concat(classe));
+    });
+    for (var i in classesMagicas) {
+        if (Number(ask.question("\nQual classe: ")) === Number(i) + 1) {
+            return classesMagicas[i];
+        }
+    }
+    return "Clsse nao encontrada";
+}
 function Main() {
     var sair = 0;
     do {
@@ -10,7 +36,7 @@ function Main() {
         switch (Number(ask.question("Digite um numero: "))) {
             case 1:
                 console.clear();
-                var alunoCadastro = new Aluno_1.aluno(ask.question("Nome: "), Number(ask.question("Idade: ")), ask.question("Nacionalidade: "), ask.question("Classe Magica: "));
+                var alunoCadastro = new Aluno_1.aluno(ask.question("Nome: "), Number(ask.question("Idade: ")), ask.question("Nacionalidade: "), classeMag());
                 alunos.push(alunoCadastro);
                 alunoCadastro.sortearCasa();
                 console.clear();

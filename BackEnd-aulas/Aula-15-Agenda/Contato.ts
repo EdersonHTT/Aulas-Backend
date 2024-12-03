@@ -1,15 +1,15 @@
 export class Contato {
     private nome: string
-    private numero: number
+    private numero: string
     private email: string
 
-    constructor(nome: string, numero: number, email: string){
+    constructor(nome: string, numero: string, email: string){
         this.nome = nome
         this.numero = numero
         this.email = email
     }
 
-    editarContato(nome: string, telefone: number, email: string): void {
+    editarContato(nome: string, telefone: string, email: string): void {
         this.nome = nome
         this.numero = telefone
         this.email = email
@@ -28,11 +28,11 @@ export class Contato {
         this.nome = nome
     } 
 
-    public getTelefone(): number {
+    public getTelefone(): string {
         return this.numero
     } 
 
-    public setTelefone(telefone: number): void {
+    public setTelefone(telefone: string): void {
         this.numero = telefone
     }
 

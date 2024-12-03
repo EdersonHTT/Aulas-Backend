@@ -9,7 +9,7 @@ function main (){
 
         console.clear()
 
-        console.log("Escolha uma opção:");
+        console.log("Escolha uma opção:\n");
         console.log("1 - Adicionar contato");
         console.log("2 - Remover contato");
         console.log("3 - Listar todos os contatos");
@@ -17,16 +17,16 @@ function main (){
         console.log("5 - Editar contato");
         console.log("6 - Sair");
         
-        const opcao = ask.question("Digite a opcao desejada: ");
+        const opcao = ask.question("\nDigite a opcao desejada: ");
         
         switch (opcao) {
             case "1":
                 console.clear()
-                const contato = new Contato(ask.question("Nome: "), Number(ask.question("\nTelefone: ")), ask.question("\nEmail: "))
+                const contato = new Contato(ask.question("Nome: "), ask.question("\nTelefone: "), ask.question("\nEmail: "))
                 console.clear()
                 console.log(agenda.adicionarContato(contato))
                 contato.mostrarContato()
-                ask.question("Enter para continuar...")
+                ask.question("\nEnter para continuar...")
             break;
             case "2":
                 console.clear()
@@ -53,11 +53,11 @@ function main (){
                 console.log("=========================\n")
                 agenda.listarContatos()
                 console.log("=========================")
-                const nome = ask.question("Nome do contato para editar: ")
+                const nome: string = ask.question("Nome do contato para editar: ")
                 for(let i in agenda.contatos){
                     if(agenda.contatos[i].getNome().toLocaleLowerCase() === nome.toLocaleLowerCase()){
                         console.clear()
-                        agenda.contatos[i].editarContato(ask.question("Nome: "), Number(ask.question("\nTelefone: ")), ask.question("\nEmail: "))
+                        agenda.contatos[i].editarContato(ask.question("Nome: "), ask.question("\nTelefone: "), ask.question("\nEmail: "))
                         console.clear()
                         agenda.editarContato(nome, agenda.contatos[i])
                         ask.question("\nEnter para Continuar...")
