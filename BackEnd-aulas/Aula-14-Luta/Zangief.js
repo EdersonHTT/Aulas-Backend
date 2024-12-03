@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Ken = void 0;
-var Ken = /** @class */ (function () {
-    function Ken() {
-        this.nome = "Ken";
+exports.Zangief = void 0;
+var Zangief = /** @class */ (function () {
+    function Zangief() {
+        this.nome = "Zangief";
         this.vida = 100;
-        this.nacionalidade = "Americano";
-        this.estiloLuta = "Ansatsuken";
+        this.nacionalidade = "Russo";
+        this.estiloLuta = "Luta Livre";
     }
-    Ken.prototype.golpeLeve = function (inimigo) {
+    Zangief.prototype.golpeLeve = function (inimigo) {
         var dano = 0;
         while (dano < 5) {
             dano = Number(Math.floor(Math.random() * 15));
@@ -16,46 +16,46 @@ var Ken = /** @class */ (function () {
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Leve e causou ".concat(dano, " de dano"));
     };
-    Ken.prototype.golpePesado = function (inimigo) {
+    Zangief.prototype.golpePesado = function (inimigo) {
         var dano = 0;
-        while (dano < 5) {
+        while (dano < 15) {
             dano = Number(Math.floor(Math.random() * 30));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Pesado e causou ".concat(dano, " de dano"));
     };
-    Ken.prototype.golpeEspecial = function (inimigo) {
+    Zangief.prototype.golpeEspecial = function (inimigo) {
         var dano = 0;
-        while (dano < 25) {
-            dano = Number(Math.floor(Math.random() * 45));
+        while (dano < 35) {
+            dano = Number(Math.floor(Math.random() * 50));
         }
         inimigo.setVida(inimigo.getVida() - dano);
         console.log("Usou Golpe Especial e causou ".concat(dano, " de dano"));
     };
-    Ken.prototype.getNome = function () {
+    Zangief.prototype.getNome = function () {
         return this.nome;
     };
-    Ken.prototype.setNome = function (nome) {
+    Zangief.prototype.setNome = function (nome) {
         this.nome = nome;
     };
-    Ken.prototype.getVida = function () {
+    Zangief.prototype.getVida = function () {
         return this.vida;
     };
-    Ken.prototype.setVida = function (vida) {
+    Zangief.prototype.setVida = function (vida) {
         this.vida = vida;
     };
-    Ken.prototype.getNacionalidade = function () {
+    Zangief.prototype.getNacionalidade = function () {
         return this.nacionalidade;
     };
-    Ken.prototype.setNacionalidade = function (nacionalidade) {
+    Zangief.prototype.setNacionalidade = function (nacionalidade) {
         this.nacionalidade = nacionalidade;
     };
-    Ken.prototype.getEstiloLuta = function () {
+    Zangief.prototype.getEstiloLuta = function () {
         return this.estiloLuta;
     };
-    Ken.prototype.setEstiloLuta = function (nacionalidade) {
+    Zangief.prototype.setEstiloLuta = function (nacionalidade) {
         this.estiloLuta = this.estiloLuta;
     };
-    return Ken;
+    return Zangief;
 }());
-exports.Ken = Ken;
+exports.Zangief = Zangief;

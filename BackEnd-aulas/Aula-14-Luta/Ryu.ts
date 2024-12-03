@@ -4,8 +4,8 @@ export class Ryu implements Personagem {
     
     private nome: string = "Ryu"
     private vida: number = 100
-    private nacionalidade: string = "BR"
-    private estiloLuta: string = "Dragão"
+    private nacionalidade: string = "Japones"
+    private estiloLuta: string = "Shotokan Karate"
     
     golpeLeve(inimigo: Personagem): void{
         let dano:number = 0
