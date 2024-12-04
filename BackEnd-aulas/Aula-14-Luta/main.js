@@ -63,7 +63,7 @@ function main(p1, p2, computador) {
             if (p1.getVida() > 0 && p2.getVida() > 0) {
                 if (p1.getVida() > 0 && p2.getVida() > 0) {
                     do {
-                        console.log("".concat(p1.getNome(), " - Vida: ").concat(p1.getVida(), "\n").concat(p2.getNome(), " - Vida: ").concat(p2.getVida()));
+                        console.log("\n".concat(p1.getNome(), "                 ").concat(p2.getNome(), "\nVida: ").concat(p1.getVida(), "           Vida: ").concat(p2.getVida()));
                         if (!computador) {
                             console.log("\nP1:");
                         }
@@ -112,7 +112,7 @@ function main(p1, p2, computador) {
                 if (p1.getVida() > 0 && p2.getVida() > 0 && !computador) {
                     console.clear();
                     do {
-                        console.log("".concat(p1.getNome(), " - Vida: ").concat(p1.getVida(), "\n").concat(p2.getNome(), " - Vida: ").concat(p2.getVida()));
+                        console.log("\n".concat(p1.getNome(), "                 ").concat(p2.getNome(), "\nVida: ").concat(p1.getVida(), "           Vida: ").concat(p2.getVida()));
                         console.log("\nP2:");
                         switch (Number(ask.question("\n[1] - Ataque Leve\n[2] - Ataque Pesado\n[3] - Ataque Especial - " + especial2 + "\n\nDigite um numero: "))) {
                             case 1:
@@ -161,7 +161,7 @@ function main(p1, p2, computador) {
                 ask.question("=====================\n     Voce perdeu\n=====================\n\nEnter para ir a tela de inicio...");
             }
             else {
-                ask.question("=====================\n     P1 Perdeu\n=====================\n\nEnter para ir a tela de inicio...");
+                ask.question("=====================\n     P2 Venceu\n=====================\n\nEnter para ir a tela de inicio...");
             }
             inicio();
         }
@@ -170,7 +170,7 @@ function main(p1, p2, computador) {
                 ask.question("=====================\n     Voce Ganhou\n=====================\n\nEnter para ir a tela de inicio...");
             }
             else {
-                ask.question("=====================\n     P2 Perdeu\n=====================\n\nEnter para ir a tela de inicio...");
+                ask.question("=====================\n     P1 Venceu\n=====================\n\nEnter para ir a tela de inicio...");
             }
             inicio();
         }
@@ -208,7 +208,7 @@ function escolhaPerson(selecao) {
 }
 function inicio() {
     console.clear();
-    var nu = Number(ask.question("[1] -----Jogar Contra Bot-----\n\n[2] ------2 Jogadores------\n\n[3] ---------Sair---------\n\nEscolha: "));
+    var nu = Number(ask.question("\n[1] ---Jogar Contra Bot---\n[2] -----2 Jogadores------\n[3] ---------Sair---------\n    \n    Escolha: "));
     if (nu === 1) {
         escolhaPerson(1);
     }

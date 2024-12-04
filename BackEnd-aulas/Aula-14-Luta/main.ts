@@ -64,7 +64,9 @@ function main (p1: Personagem, p2: Personagem, computador: boolean){
             if(p1.getVida() > 0 && p2.getVida() > 0){
                 if(p1.getVida() > 0 && p2.getVida() > 0){
                     do{
-                        console.log(`${p1.getNome()} - Vida: ${p1.getVida()}\n${p2.getNome()} - Vida: ${p2.getVida()}`)
+                        console.log(`
+${p1.getNome()}                 ${p2.getNome()}
+Vida: ${p1.getVida()}           Vida: ${p2.getVida()}`)
                         if(!computador){
                             console.log("\nP1:")
                         }
@@ -112,7 +114,9 @@ function main (p1: Personagem, p2: Personagem, computador: boolean){
                 if(p1.getVida() > 0 && p2.getVida() > 0 && !computador){
                     console.clear()
                     do{
-                        console.log(`${p1.getNome()} - Vida: ${p1.getVida()}\n${p2.getNome()} - Vida: ${p2.getVida()}`)
+                        console.log(`
+${p1.getNome()}                 ${p2.getNome()}
+Vida: ${p1.getVida()}           Vida: ${p2.getVida()}`)
                         console.log("\nP2:")
                         switch(Number(ask.question("\n[1] - Ataque Leve\n[2] - Ataque Pesado\n[3] - Ataque Especial - "+ especial2 +"\n\nDigite um numero: "))){
                             case 1:
@@ -158,14 +162,14 @@ function main (p1: Personagem, p2: Personagem, computador: boolean){
             if(computador){
                 ask.question("=====================\n     Voce perdeu\n=====================\n\nEnter para ir a tela de inicio...")
             } else {
-                ask.question("=====================\n     P1 Perdeu\n=====================\n\nEnter para ir a tela de inicio...")
+                ask.question("=====================\n     P2 Venceu\n=====================\n\nEnter para ir a tela de inicio...")
             }
             inicio()
         } else {
             if(computador){
                 ask.question("=====================\n     Voce Ganhou\n=====================\n\nEnter para ir a tela de inicio...")
             } else {
-                ask.question("=====================\n     P2 Perdeu\n=====================\n\nEnter para ir a tela de inicio...")
+                ask.question("=====================\n     P1 Venceu\n=====================\n\nEnter para ir a tela de inicio...")
             }
             inicio()
         }
@@ -203,7 +207,12 @@ function escolhaPerson(selecao: number): void{
 
 function inicio (){
     console.clear()
-    let nu:number = Number(ask.question("[1] -----Jogar Contra Bot-----\n\n[2] ------2 Jogadores------\n\n[3] ---------Sair---------\n\nEscolha: "))
+    let nu:number = Number(ask.question(`
+[1] ---Jogar Contra Bot---
+[2] -----2 Jogadores------
+[3] ---------Sair---------
+    
+    Escolha: `))
     if(nu === 1){
         escolhaPerson(1)
     } else if(nu === 2){
